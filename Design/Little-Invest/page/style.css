@@ -1,6 +1,8 @@
 body{
     margin: 0px;
     padding: 0px;
+}
+* {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -48,7 +50,7 @@ a {
 
 
 
-.intro{
+#intro{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
@@ -56,7 +58,7 @@ a {
     max-width: 1156px;
 
 }
-.intro p {
+#intro p {
     font-size: 45px;
     width: 400px;
     line-height: 60px;
@@ -66,7 +68,7 @@ a {
     background-color: #4455DD;
     box-shadow: 0px 2px 2px #00000048;
 }
-.intro > .button {
+#intro > .button {
     width: 204px;
     height: 51px;
     max-height: 63px;
@@ -79,13 +81,13 @@ a {
     /* margin-top: -60px; */
 
 }
-.intro *:nth-child(2){
+#intro *:nth-child(2){
     grid-row: 1 / 3;
     grid-column: 2;
 
 }
 
-.invest-sep {
+#invest-sep {
     background-color: #4455DD;
     width: 100%;
     min-height: 346px;
@@ -95,7 +97,7 @@ a {
     flex-wrap: wrap;
 
 }
-.invest-sep > .container {
+#invest-sep > .container {
     display: flex;
     width: 1160px;
     flex-wrap: wrap;
@@ -103,27 +105,61 @@ a {
     align-items: center;
 
 }
-.invest-sep > .container h5, .invest-sep > .container h4{
+#invest-sep > .container h5, #invest-sep > .container h4{
     font-size: 25px;
     line-height: 0px;
 }
-.invest-sep > .container h5{
+#invest-sep > .container h5{
     color: #4455DD;
 }
-.invest-sep > .container h4{
+#invest-sep > .container h4{
     color: #4D4D4D;
 }
-.invest-sep > .container p {
+#invest-sep > .container p {
     color:#ABABAB;
     font-size: 15px;
 }
-.invest-sep > .container .sep{
+#invest-sep > .container .sep{
     display: block;
     height: 3px;
     width: 50px;
     background-color: #D1D1D1;
 }
-.invest-sep > .container > div {
+
+#invest-sep > .container .button{
+    width: 193px;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+}
+#invest-sep > .container .button p{
+    color: white;
+    margin: auto 10px;
+    width: auto;
+    font-size: 18px;
+    font-weight: 600;
+}
+#invest-sep > .container .button span{
+    color: #4455DD;
+    background-color: white;
+    height: 20x;
+    width: 20px;
+    text-align: center;
+    align-self: center;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+#invest-sep > .container .button span > p {
+    color:#4455DD;
+    margin: -1px 0 0 auto;
+    display: block;
+    font-size: 25px;
+    line-height: 20px;
+
+}
+
+#invest-sep > .container > div {
     display: block;
     margin: 15px;
     background-color: white;
@@ -137,7 +173,7 @@ a {
     	
 }
 
-.servicos {
+#servicos {
     margin: 70px auto;
     min-height: 637px;
     max-width: 1156px;
@@ -147,14 +183,14 @@ a {
     flex-wrap: wrap;
     
 }
-.servicos h2{
+#servicos h2{
     width: 100%;
     font-size: 40px;
     color: #444444;
     font-weight: 600;
     text-align: center;
 }
-.servicos  div {
+#servicos  div {
     min-width: 360px;
     height: auto;
     display: block;
@@ -162,8 +198,8 @@ a {
     text-align: center;
     flex: 0 1 360px;
 }
-.servicos img { width: 100%; }
-.servicos h4{ 
+#servicos img { width: 100%; }
+#servicos h4{ 
     width: 250px; 
     margin: 0 auto;
     font-size: 28px ;
@@ -171,7 +207,7 @@ a {
     color: #444444;
     margin-bottom: 24px;
 }
-.servicos p{ 
+#servicos p{ 
     width: 250px; 
     margin: 0 auto;
     font-size: 18px ;
@@ -179,7 +215,7 @@ a {
     color: #ABABAB;
 }
 
-.servicos .button{
+#servicos .button{
     display: flex;
     margin: 40px auto;
     height: 63px;
@@ -189,14 +225,14 @@ a {
     align-items: center;
     border-radius: 6px;
 }
-.servicos > .button > p{
+#servicos > .button > p{
     color: white;
     width: auto;
     margin: 0 auto;
     font-size: 27px;
 }
 
-.depoimentos {
+#depoimentos {
     display: block;
     width: 100%;
     height: 800px;
@@ -205,7 +241,7 @@ a {
     background-position: center;
     z-index: 999;
 }
-.depoimentos span {
+#depoimentos span {
     
     box-sizing: border-box;
     padding: 60px;
@@ -216,7 +252,7 @@ a {
     background-attachment: local;
     background-color: rgba(0, 16, 135, 0.726);
 }
-.depoimentos p:nth-child(1){
+#depoimentos p:nth-child(1){
     margin: 400px 0 0 0;
     line-height: 0;
     font-size: 190px ;
@@ -224,14 +260,14 @@ a {
     font-weight: 600;
     font-style: italic;
 }
-.depoimentos p:nth-child(2){
+#depoimentos p:nth-child(2){
     width: 600px;
     font-size: 37px ;
     color:#E6E6E6;
     font-style: italic;
     margin: 0 110px ;
 }
-.depoimentos p:nth-child(3){
+#depoimentos p:nth-child(3){
     font-size: 108px ;
     color:#E3E6FF;
     font-weight: 600;
@@ -239,9 +275,79 @@ a {
     line-height: 0px;
     margin: 50px 0px 20px 710px ;
 }
-.depoimentos p:nth-child(4){
+#depoimentos p:nth-child(4){
     font-size: 20px ;
     color:#C1C1C1;
     font-style: italic;
     margin: 0 110px ;
 }
+#cadastro {
+    width: 100%;
+    min-height: 580px;
+    margin: 0 auto;
+    display: flex;
+}
+#cadastro > div:first-child{
+    width: 50%;
+    background: #F6F6F6;
+    
+}
+#cadastro > div:first-child > h3{
+    text-align: center;
+    font-size: 40px;
+    color: #575757;
+    font-style: italic;
+    
+}
+#cadastro > div:first-child  label,  
+#cadastro > div:first-child  input
+{
+    width: 442px;
+    display: block;
+    margin: 0 auto;
+}
+#cadastro > div:first-child  label { 
+    color:#707070;
+    font-size: 22px;
+    font-weight: 600;
+}
+#cadastro > div:first-child  input {
+    margin-top: 15px;
+    margin-bottom: 46px;
+    padding-left: 15px;
+    font-size: 20px;
+    height: 45px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #00000032 ;
+    border: 1px solid rgb(156, 156, 156);
+    color: rgb(97, 112, 228);
+
+}
+#cadastro > div:first-child  button{
+    width: 204px;
+    height: 63px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    
+}
+#cadastro > div:nth-child(2){
+    width: 50%;
+    display: block;
+}
+#cadastro > div:nth-child(2) > p{
+    text-align: center;
+    display: block;
+    font-size: 37px;
+    color:#707070;
+    font-weight: 600;
+}
+#cadastro > div:nth-child(2) >  img{
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+}
+
