@@ -5,13 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,600;1,400&display=swap" rel="stylesheet"> 
+        <script>
+            h = true;
+            function hide(){
+                if(h == false){
+                    document.getElementById("nav-bar").classList.add("hide");
+                }else{
+                    document.getElementById("nav-bar").classList.remove("hide");
+                }
+                h = !h;
+            }
+        </script>
         <title>Document</title>
     </head>
     <body>
 
         <header>
-            <nav class="nav-bar">
-                <a href="/"><img src=""></a>
+            <nav id="nav-bar" class="hide">
+                <div onclick="hide()" id="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="/"><img src="img/customer-service-woman.svg"></a>
                 <ul>
                     <li><a href="">Investimento</a></li>
                     <li><a href="">Serviços</a></li>
