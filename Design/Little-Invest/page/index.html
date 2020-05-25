@@ -8,15 +8,17 @@
         <script>
             h = true;
             function hide(){
-                if(h == false){
-                    document.getElementById("nav-bar").classList.add("hide");
-                }else{
+                if(h){
                     document.getElementById("nav-bar").classList.remove("hide");
+                    document.getElementById("nav-bar").classList.add("close");
+                }else{
+                    document.getElementById("nav-bar").classList.remove("close");
+                    document.getElementById("nav-bar").classList.add("hide");
                 }
                 h = !h;
             }
         </script>
-        <title>Document</title>
+        <title>Little Invest</title>
     </head>
     <body>
 

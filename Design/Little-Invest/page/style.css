@@ -26,7 +26,7 @@ a { text-decoration: none; }
     display: block;
     width: 60px;
     height: 7px;
-    background-color: #C5C5C5;
+    background-color: #5a5a5a;
     margin: 5px;
 }
 #nav-bar a{
@@ -422,13 +422,33 @@ a { text-decoration: none; }
     #nav-bar { 
         height: auto;
         line-height: 45px;
+        position: fixed;
+        width: 100%;
+        transition: 1s;
     } 
+
     .hide  ul, .hide img { display: none !important;}
-    #nav-bar > #button { display: block;}
+    #nav-bar > #button { display: block; transition: 1s;}
     #nav-bar, #nav-bar > ul{ 
         display: block; 
         padding-bottom: 10px;
     }
+    #button > span {
+        transition: 0.5s;
+    }
+    .close > #button > span:first-child{
+        transform: rotate(45deg);
+        margin-top: 10px !important
+
+    }
+    .close > #button > span:nth-child(2){
+        display: none !important;
+    }
+    .close > #button > span:last-child{
+        transform: rotate(-45deg);
+        margin-top: -10px !important;
+    }
+
     
     #intro{ 
         display: flex;
@@ -517,7 +537,7 @@ a { text-decoration: none; }
         grid-template-rows: minimax(20px, 1fr) 1fr;
     }
     #rodape > .sociais h4, #rodape > .sobre h4 { 
-        font-size: 5vw;
+        font-size: 3.5vw;
         line-height: 0;
         margin: 0px;
     }
