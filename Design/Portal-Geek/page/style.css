@@ -1,0 +1,98 @@
+
+@font-face {
+    font-family: teste;
+    font-style: normal;
+    font-weight: normal;
+    src: url("/font/Comic\ Gibi.ttf");
+}
+a{ text-decoration: none;}
+#header{
+    display: flex;
+    height: 180px;
+}
+#menu {
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-self: flex-end;
+    align-content: center;
+}
+#menu > * {  align-self: center;}
+#menu > a > img {margin-left: 8vw;}
+#menu .dropdown > li > a{ color: white;  font-size: 18px; }
+.dropdown { 
+    display: flex;
+    gap: 35px;
+    font-family: "Comic Gibi";
+    padding-left: 20px;
+}
+.dropdown * { list-style: none; color: black }
+.dropdown li > ul > li { width: 100%;}
+ul.dropdown > li > ul { 
+    font-size: 20px;
+    background: url('img/Baloon-dropdown.svg') no-repeat ;
+    background-size: contain;
+    background-position: top 0px;
+    background-attachment: scroll;
+    padding-top: 95px;
+    padding-left: 0px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    transition: all .7s;
+    width: 200px;
+    height: 290px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+ul.dropdown > li > ul > li {
+    padding: 3px 25px;
+    box-sizing: border-box;
+    min-width: 140px;
+}
+.dropdown ul > li:hover  { background: orangered; }
+.dropdown > li:hover > ul, .dropdown > li > ul:hover { visibility: visible; opacity: 1;}
+ul.dropdown > li > ul > li > ul { 
+    background: url('img/excla-baloon.svg') no-repeat;
+    background-attachment: scroll;
+    background-size: auto;
+    background-size: contain;
+    background-position: top 0px;
+    background-attachment: scroll;
+    padding-top: 65px;
+    padding-left: 90px;
+    padding-bottom: 50px;
+    transition: all .7s;
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    left: 185px;
+    margin-top: -35px;
+    opacity: 0;
+    visibility: hidden;
+    box-sizing: border-box;
+    padding-right: 60px;
+}
+.dropdown > li > ul > li:hover > ul, 
+.dropdown > li > ul > li > ul:hover,
+.dropdown > li:hover ul::before, 
+.dropdown > li:hover ul::after 
+{ visibility: visible; opacity: 1;}
+
+
+#footer { 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#footer ul { 
+    width: 100%;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: center;
+    align-content: center;
+}
