@@ -1,0 +1,138 @@
+
+#carousel {
+    margin-top: 25px;
+    width: 580px;
+    height: 350px;
+    border: solid 2px #C8C8C8;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    transition: filter 1s .4s ;
+}
+#carousel .item { 
+    width: 90%;
+    margin: 8px;
+    height: auto;
+    filter: 
+        drop-shadow(3px 3px 3px rgba(50, 50, 0, 0.5))
+        contrast(1)
+        brightness(0.8)
+        grayscale(0);
+    transition: filter .6s 0.5s ease-in;
+}
+#carousel .blur, #carousel:hover .item  { 
+    filter: 
+        blur(1px)
+        grayscale(1)
+        contrast(3)
+        brightness(0.7);
+    transition: filter 0.5s ease-in;
+}
+#carousel .active, #carousel .item:hover {
+    filter: 
+        drop-shadow(5px 3px 20px rgba(255, 255, 255, 0.514))
+        contrast(2)
+        brightness(0.74)
+        grayscale(0);
+    z-index: 990 !important;
+}
+
+#carousel .active .content, #carousel .item:hover .content { 
+    margin-top:  -2px !important;
+    margin-left: -2px !important;
+}
+
+#carousel .active .content, #carousel .item:hover .content {
+    width:  260% !important;
+    height: 210% !important;
+}
+#carousel .active:nth-child(2) .content, 
+#carousel .active:nth-child(5) .content,
+#carousel .item:nth-child(2):hover .content, 
+#carousel .item:nth-child(5):hover .content{
+    margin-left: calc(-70% + -2px) !important;
+}
+#carousel .active:nth-child(3) .content, 
+#carousel .active:nth-child(6) .content,
+#carousel .item:nth-child(3):hover .content, 
+#carousel .item:nth-child(6):hover .content{
+    margin-left: calc(-140% + -2px) !important;
+}
+
+#carousel .active:nth-child(4) .content, 
+#carousel .active:nth-child(5) .content, 
+#carousel .active:nth-child(6) .content,
+#carousel .item:nth-child(4):hover .content, 
+#carousel .item:nth-child(5):hover .content, 
+#carousel .item:nth-child(6):hover .content{
+    margin-top: -174px !important;
+}
+
+
+#carousel .item:first-child, #carousel .item:nth-child(4) { margin-left: 14px !important;}
+#carousel .item:nth-child(2), #carousel .item:nth-child(5) { margin-left: -12px; }
+#carousel .item:nth-child(3), #carousel .item:nth-child(6) { margin-left: -26px; }
+#carousel .item .border {
+    width: calc(115% + 4px);
+    height: 160px;
+    background-color: rgb(68, 67, 67);
+    position: absolute;
+    transition: .7s .3s;
+}
+#carousel .item .content {
+    width: 115%;
+    height: 156px;
+    margin: 2px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .7s .3s ;
+
+}
+#carousel .item .content img { width: 100%; height: 100%;}
+#carousel .item:first-child .border { clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);}
+#carousel .item:first-child .content { clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);}
+#carousel .item:nth-child(2) .border{ 
+    clip-path:  polygon(0% 0%, 100% 0%, 75% 100%, 25% 100%) ;    
+    width: calc(4px + 123%);
+}
+#carousel .item:nth-child(2) .content{ 
+    clip-path:  polygon(0% 0%, 100% 0%, 75% 100%, 25% 100%) ;    
+    width: 123%;
+}
+#carousel .item:nth-child(3) .border{ clip-path:  polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);}
+#carousel .item:nth-child(3) .content{ clip-path:  polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);}
+
+#carousel .item:nth-child(4) .border { clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);}
+#carousel .item:nth-child(4) .content { clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);}
+#carousel .item:nth-child(5) .border{ 
+    clip-path:  polygon( 25% 0%, 75% 0%, 100% 100%, 0% 100%);    
+    width: calc(4px + 123%);
+}
+#carousel .item:nth-child(5) .content{ 
+    clip-path:  polygon( 25% 0%, 75% 0%, 100% 100%, 0% 100%);    
+    width: 123%;
+}
+#carousel .item:nth-child(6) .border{ clip-path:  polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);}
+#carousel .item:nth-child(6) .content{  clip-path:  polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);}
+
+#carousel .content > span{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-left: 110px;
+    background-image: linear-gradient( transparent,rgba(0, 0, 0, 0.651), black);
+    color: white;
+    display: block;
+    transition: .3s .8s;
+}
+#carousel .active .content > span , 
+#carousel .item:hover .content > span 
+{ margin-top: -45%;}
+#carousel .active:nth-child(1) .content > span, 
+#carousel .item:nth-child(1):hover .content > span, 
+#carousel .active:nth-child(4) .content > span,
+#carousel .item:nth-child(4):hover .content > span
+{ padding-left: 55px;}

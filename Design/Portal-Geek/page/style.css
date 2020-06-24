@@ -5,34 +5,75 @@
     font-weight: normal;
     src: url("/font/Comic\ Gibi.ttf");
 }
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
 a{ text-decoration: none;}
 #header{
     display: flex;
     height: 180px;
 }
-#menu {
+#button-menu{display: none;}
+#button-menu span{
+    margin: 10px;
+    width: 35px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+    display: block;
+}
+#button-menu span::before, #button-menu span::after{
+    content: '';
+    background: #fff;
+    display: block;
+    width: 35px;
+    height: 3px;
+    position: absolute;
+    border-radius: 10px;
+
+}
+#button-menu span::before{
+    top: -8px;
+}
+#button-menu span::after{
+     bottom: -8px;
+ }
+#container-menu {
+    align-self: flex-end;
+    align-content: center;
     width: 100%;
-    background-color: black;
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+}
+#menu {
+    width: 1024px;
+    background-color: #161616;
     color: white;
     height: 50px;
     display: flex;
-    align-self: flex-end;
-    align-content: center;
 }
 #menu > * {  align-self: center;}
-#menu > a > img {margin-left: 8vw;}
 #menu .dropdown > li > a{ color: white;  font-size: 18px; }
 .dropdown { 
     display: flex;
-    gap: 35px;
     font-family: "Comic Gibi";
     padding-left: 20px;
+    z-index: 999 !important;
 }
+.dropdown > li + li{ margin-left: 35px;}
 .dropdown * { list-style: none; color: black }
-.dropdown li > ul > li { width: 100%;}
+.dropdown > li > ul > li {
+    width: calc(100% - 12px);
+    margin-left: 2px; 
+}
+.dropdown > li > ul > li > ul > li {
+    width: 65%;
+}
 ul.dropdown > li > ul { 
     font-size: 20px;
-    background: url('img/Baloon-dropdown.svg') no-repeat ;
+    background: url('img/Baloon-dropdown2.svg') no-repeat ;
     background-size: contain;
     background-position: top 0px;
     background-attachment: scroll;
@@ -55,21 +96,22 @@ ul.dropdown > li > ul > li {
 .dropdown ul > li:hover  { background: orangered; }
 .dropdown > li:hover > ul, .dropdown > li > ul:hover { visibility: visible; opacity: 1;}
 ul.dropdown > li > ul > li > ul { 
-    background: url('img/excla-baloon.svg') no-repeat;
+    
+    background: url('img/excla-baloon2.svg') no-repeat;
     background-attachment: scroll;
     background-size: auto;
     background-size: contain;
     background-position: top 0px;
     background-attachment: scroll;
     padding-top: 65px;
-    padding-left: 90px;
+    padding-left: 60px;
     padding-bottom: 50px;
     transition: all .7s;
     width: 350px;
     height: 200px;
     position: absolute;
-    left: 185px;
-    margin-top: -35px;
+    left: 175px;
+    margin-top: -40px;
     opacity: 0;
     visibility: hidden;
     box-sizing: border-box;
@@ -79,20 +121,169 @@ ul.dropdown > li > ul > li > ul {
 .dropdown > li > ul > li > ul:hover,
 .dropdown > li:hover ul::before, 
 .dropdown > li:hover ul::after 
-{ visibility: visible; opacity: 1;}
+{ visibility: visible; opacity: 1; z-index: 999 !important;}
+#container {
+    min-height: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#main {
+    display: flex;
+}
 
+.post {
+    max-width: 410px;
+    height: 170px ;
+    display: block;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.200);
+}
+.post span {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px;
+    background-image: linear-gradient( transparent,Black);
+    color: white;
+    display: block;
+    transition: .6s;
+    margin-top: -120px;
+    line-height: 30px;
+}
+.post h4 , .post p { margin: 0; }
+.post p:last-child { 
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    font-family:   'comic gibi';
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 12px;
+}
+.post img {
+    width: 100%; 
+    height: 100%;
+    display: block;
+    flex: 1 1 250px;
+    transition: .6s;
 
+}
+.post:hover img {
+    width: calc(40px + 100%);
+    height: calc(40px + 100%);
+}
+.post:hover span {
+    margin-top: calc(-40px + -120px);
+}
+#side {  
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin-top: 25px;
+    margin-left: 18px;
+    flex: 1 1 300px;
+}
+#side .post {
+    max-width: 400px;
+    flex: 1 1 250px;
+}
+#side .post span h4 { font-size: 23px;}
+#side .post + .post { margin-top: 15px;}
+
+#sub-post {
+    margin-top: 35px;
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#sub-post .post {
+    max-width: 320px;
+    width: auto !important;
+    height:200px;
+    flex: 1 1 300px;
+}
+#sub-post .post h4 {
+    font-size: 30px;
+}
+#sub-post .post p {  font-size: 14px;}
+#sub-post .post p:last-child {  
+    font-size: 11px;
+    letter-spacing: 1.2px;
+}
+#sub-post .post:last-child{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 290px ;
+    max-width: 1024px;
+    flex: 1 1 300px;
+
+}
+#sub-post .post:last-child span{
+    padding-top: 50px;
+    max-width: 100%;
+    height: 170px;
+    flex: 1 1 300px;
+    margin-top: -170px;
+}
+#sub-post .post:last-child:hover span{
+    margin-top: calc(-40px + -170px);
+}
+#sub-post .post:last-child h4{
+    font-size: 40px;
+    line-height: 50px;
+}
 #footer { 
     display: flex;
     justify-content: center;
-    align-content: center;
     flex-wrap: wrap;
+    height: 350px;
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-family:   'comic gibi';
+    font-size: 20px;
+}
+#footer > span:first-child {
+    background-color: #0e0e0e;
+    width: 100%;
+    height: 70px;
+    align-self: flex-start;
 }
 #footer ul { 
     width: 100%;
     display: flex;
     list-style: none;
-    gap: 30px;
     justify-content: center;
     align-content: center;
+}
+#footer ul > li { letter-spacing: 3px;}
+#footer ul > li + li { margin-left: 30px;}
+#footer p {
+    height: 15px;
+    margin:10px;
+    padding: 0;
+    align-self: flex-end;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px){
+    /* #body { overflow-x: hidden;} */
+    /* #sub-post{
+        min-width: 1300px;
+        width: 1400px;
+        flex-wrap: nowrap;
+        height: 300px;
+        overflow-x: scroll;
+        justify-content: space-around;
+        align-content: space-around; */
+   /* } */
 }
