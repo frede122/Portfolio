@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="normalize.css">
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="slide/carousel.css">
         <link rel="stylesheet" href="hq-carousel/hq-carousel.css">
@@ -57,8 +57,8 @@
         </header>
 
         <main id="container">
-            <section id="carousel">
-                <div id="carousel-0" class="item" onmouseover="carMouseOver()" onmouseout="carMouseOut()" >
+            <section onmouseover="carMouseOver()" onmouseout="carMouseOut()" id="carousel">
+                <div id="carousel-0" class="item" >
                     <span class="border "></span>
                     <span class="content">
                         <img src="img/thor.jpg">
@@ -68,7 +68,7 @@
                         </span>
                     </span>
                 </div>
-                <div id="carousel-1" class="item" onmouseover="carMouseOver(id)" onmouseout="carMouseOut(id)">
+                <div id="carousel-1" class="item">
                     <span class="border"></span>
                     <span class="content">
                         <img src="img/spiderman.jpg">
@@ -78,7 +78,7 @@
                         </span>
                     </span>
                 </div>
-                <div id="carousel-2" class="item" onmouseover="carMouseOver(id)" onmouseout="carMouseOut(id)">
+                <div id="carousel-2" class="item">
                     <span class="border"></span>
                     <span class="content">
                         <img src="img/w.jpg">
@@ -88,7 +88,7 @@
                         </span>
                     </span>
                 </div>
-                <div id="carousel-3" class="item" onmouseover="carMouseOver(id)" onmouseout="carMouseOut(id)" >
+                <div id="carousel-3" class="item">
                     <span class="border"></span>
                     <span class="content">
                         <img src="img/mk.jpg">
@@ -98,7 +98,7 @@
                         </span>
                     </span>
                 </div>
-                <div id="carousel-4" class="item" onmouseover="carMouseOver(id)" onmouseout="carMouseOut(id)" >
+                <div id="carousel-4" class="item">
                     <span class="border"></span>
                     <span class="content">
                         <img src="img/naruto.jpg">
@@ -108,7 +108,7 @@
                         </span>
                     </span>
                 </div>
-                <div id="carousel-5" class="item" onmouseover="carMouseOver(id)" onmouseout="carMouseOut(id)">
+                <div id="carousel-5" class="item">
                     <span class="border"></span>
                     <span class="content">
                         <img src="img/bleach.jpg">
@@ -164,7 +164,7 @@
                     </span>
                 </div>
                 <div class="post">
-                    <img src="img/xiaomi.jpg">
+                    <img src="img/spacex.jpg">
                     <span>
                         <h4>Novo Xiaomi</h4>
                         <p>Noticias > Celular</p>
@@ -173,30 +173,95 @@
                 </div>
             </section>
             <section id="hq-carousel">
+                <a  class="button" id="button-left" href=""></a>
                 <div class="container">
 
                     <div class="square" id="square0" style="background-image: url('img/super.jpg');">
-
+                        <span class="baloon">
+                            <h4>Superman enfrentara o batman novamente em nova hq</h4>
+                        </span>
                     </div>
-    
+
                     <div class="square" id="square1" style="background-image: url('img/godofwar.jpg');">
-    
+                        <span class="baloon">
+                            <h4>Veja essa incrível gameplay</h4>
+                        </span>
                     </div>
     
                     <div class="square" id="square2" style="background-image: url('img/spiderman.jpg');">
-    
+                        <span class="baloon">
+                            <h4>Como será o aranha verso da Marvel ?</h4>
+                        </span>
                     </div>
                     <div class="square" id="square3"style="background-image: url('img/bm.jpg');">
-    
+                        <span class="baloon">
+                            <h4>Temporada final de Black mirror?</h4>
+                        </span>
                     </div>
                     <div class="square" id="square4" style="background-image: url('img/pokemon.jpg');">
-    
+                        <span class="baloon">
+                            <h4>Pq o picachu não evolui Poww??</h4>
+                        </span>
                     </div>
 
                 </div>
+                <a href="" class="button" id="button-right"></a>
             </section>
             <section id="news">
-                
+                <div>
+                    <header><h4>Noticias</h4></header>
+                    <ul>
+                        <li class="list">
+                            <h5>Bleach</h5>
+                            <img src="img/bleach.jpg">
+                            <span>Data: 17/05/2020 by: fulano de tal</span>
+                            <p>Descrição do texto, aqui esta o conteúdo
+                                um, descrição minima </p>
+                        </li>
+                        <li class="list">
+                            <h5>Bleach</h5>
+                            <img src="img/bleach.jpg">
+                            <span>Data: 17/05/2020 by: fulano de tal</span>
+                            <p>Descrição do texto, aqui esta o conteúdo
+                                um, descrição minima </p>
+                        </li>
+                        <li class="list">
+                            <h5>Bleach</h5>
+                            <img src="img/bleach.jpg">
+                            <span>Data: 17/05/2020 by: fulano de tal</span>
+                            <p>Descrição do texto, aqui esta o conteúdo
+                                um, descrição minima </p>
+                        </li>
+                        <li class="list">
+                            <h5>Bleach</h5>
+                            <img src="img/bleach.jpg">
+                            <span>Data: 17/05/2020 by: fulano de tal</span>
+                            <p>Descrição do texto, aqui esta o conteúdo
+                                um, descrição minima </p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <header><h4>Anime</h4></header>
+                    <div class="post">
+                        
+                        <img src="img/spacex.jpg">
+                        <span>
+                            <h4>Lançamento será hoje</h4>
+                            <p>Noticias > Nasa</p>
+                            <p>30/05/2020 by: Frede</p>
+                        </span>
+                    </div>
+                    <div class="post">
+                        <img src="img/xiaomi.jpg">
+                        <span>
+                            <h4>Novo Xiaomi</h4>
+                            <p>Noticias > Celular</p>
+                            <p>30/05/2020 by: Frede</p>
+                        </span>
+                    </div>
+
+                </div>
             </section>
         </main>
         <footer id="footer">

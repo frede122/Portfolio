@@ -1,0 +1,17 @@
+<svg width="316.87" height="171.43" version="1.1" viewBox="0 0 316.87 171.43" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter847" color-interpolation-filters="sRGB">
+   <feFlood flood-color="rgb(0,0,0)" flood-opacity=".49804" result="flood"/>
+   <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
+   <feGaussianBlur in="composite1" result="blur" stdDeviation="3.5"/>
+   <feOffset dx="7" dy="7" result="offset"/>
+   <feComposite in="SourceGraphic" in2="offset" result="composite2"/>
+  </filter>
+ </defs>
+ <g filter="url(#filter847)">
+  <g transform="translate(9 6)" fill="#fff" data-name="baloon">
+   <path d="m237.3 145.94-41.942-48.444h-171.35c-12.412 0-22.509-12.336-22.509-27.5v-41c0-15.164 10.098-27.5 22.509-27.5h250.86c12.412 0 22.509 12.336 22.509 27.5v41c0 15.164-10.098 27.5-22.509 27.5h-56.269l18.704 48.444z"/>
+   <path d="m24.009 3c-11.585 0-21.009 11.664-21.009 26v41c0 14.336 9.4247 26 21.009 26h172.03l36.757 42.456-14.816-38.375-1.5755-4.0805h58.456c11.585 0 21.009-11.664 21.009-26v-41c0-14.336-9.4247-26-21.009-26h-250.86m0-3h250.86c13.26 0 24.009 12.984 24.009 29v41c0 16.016-10.749 29-24.009 29h-54.082l21.016 54.432-47.126-54.432h-170.66c-13.26 0-24.009-12.984-24.009-29v-41c0-16.016 10.749-29 24.009-29z" fill="#1d1d1d"/>
+  </g>
+ </g>
+</svg>

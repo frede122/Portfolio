@@ -1,6 +1,6 @@
 
 @font-face {
-    font-family: teste;
+    font-family: 'Gibi';
     font-style: normal;
     font-weight: normal;
     src: url("/font/Comic\ Gibi.ttf");
@@ -58,7 +58,7 @@ a{ text-decoration: none;}
 #menu .dropdown > li > a{ color: white;  font-size: 18px; }
 .dropdown { 
     display: flex;
-    font-family: "Comic Gibi";
+    font-family: "Gibi";
     padding-left: 20px;
     z-index: 999 !important;
 }
@@ -73,7 +73,7 @@ a{ text-decoration: none;}
 }
 ul.dropdown > li > ul { 
     font-size: 20px;
-    background: url('img/Baloon-dropdown2.svg') no-repeat ;
+    background: url('img/Baloon-dropdown.svg') no-repeat ;
     background-size: contain;
     background-position: top 0px;
     background-attachment: scroll;
@@ -97,7 +97,7 @@ ul.dropdown > li > ul > li {
 .dropdown > li:hover > ul, .dropdown > li > ul:hover { visibility: visible; opacity: 1;}
 ul.dropdown > li > ul > li > ul { 
     
-    background: url('img/excla-baloon2.svg') no-repeat;
+    background: url('img/excla-baloon.svg') no-repeat;
     background-attachment: scroll;
     background-size: auto;
     background-size: contain;
@@ -142,7 +142,7 @@ ul.dropdown > li > ul > li > ul {
     border-radius: 2px;
     box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.200);
 }
-.post span {
+.post > span {
     width: 100%;
     height: 120px;
     position: relative;
@@ -160,7 +160,7 @@ ul.dropdown > li > ul > li > ul {
     position: absolute;
     bottom: 0;
     right: 20px;
-    font-family:   'comic gibi';
+    font-family:   'Gibi';
     font-style: italic;
     font-weight: lighter;
     font-size: 12px;
@@ -222,17 +222,29 @@ ul.dropdown > li > ul > li > ul {
     margin-top: 25px;
     margin-bottom: 25px;
     width: 100%;
-    height: 290px ;
+    height: 390px ;
     max-width: 1024px;
     flex: 1 1 300px;
+    position: relative;
 
 }
+#sub-post .post:last-child::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.096),rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.568));
+    z-index: 2;
+    position: absolute;
+
+}
+
 #sub-post .post:last-child span{
     padding-top: 50px;
     max-width: 100%;
     height: 170px;
     flex: 1 1 300px;
     margin-top: -170px;
+    z-index: 2;
 }
 #sub-post .post:last-child:hover span{
     margin-top: calc(-40px + -170px);
@@ -241,6 +253,86 @@ ul.dropdown > li > ul > li > ul {
     font-size: 40px;
     line-height: 50px;
 }
+#news {
+    width: 100%;
+    min-height: 504px;
+    max-width: 1024px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+#news header {
+    background-image: url('img/sep.svg');
+    background-position-y: -5px;
+    width: 100%;
+    /* background-position-x: -10px; */
+    background-size: 35px;
+    background-repeat: repeat-x;
+    background-color: #E2EBFF;
+    height: 34px;
+    margin: 20px 0px 10px 0px;
+}
+#news header > h4 { 
+    margin: 0 0 0 100px;
+    color: #5A7FD6;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: white;
+    display: inline-block;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+#news .list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: 20px 20px 80px;
+    row-gap: 5px;
+    column-gap: 20px;
+}
+#news .list img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.438);
+    position: relative;
+    transition: 0.4s linear;
+} 
+#news .list:hover img { 
+    filter: grayscale(1);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.575);
+}
+#news li > p, #news li > span, #news li > h5{ margin: 0}
+#news h5 { 
+    color: #4e4e4e;
+    font-size: 20px;
+}
+#news li > span { 
+    color: #707070;
+    font-size: 10px;
+    font-family: 'Gibi';
+    font-style: italic;
+}
+#news li > p { color: #3a3a3a;}
+#news div:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+#news div .post {
+    width: 100%;
+    height: 220px;
+}
+#news div .post span{
+
+}
+
+
 #footer { 
     display: flex;
     justify-content: center;
@@ -249,7 +341,7 @@ ul.dropdown > li > ul > li > ul {
     width: 100%;
     background-color: rgb(20, 20, 20);
     color: white;
-    font-family:   'comic gibi';
+    font-family:   'Gibi';
     font-size: 20px;
 }
 #footer > span:first-child {

@@ -45,11 +45,11 @@ function playCarousel(time, pause, start, aleator = false){
             }
         }, time);
 }
-function carMouseOver(){
+function carMouseOver(id){
     lock = true;
     removeAllCarouselItem("active");
 }
 function carMouseOut(){ lock = false; }
 
-playCarousel(7500, 2500, true, true);
+playCarousel(3000, 1500, true, false);
 
