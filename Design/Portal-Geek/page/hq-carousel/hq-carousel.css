@@ -8,25 +8,26 @@
     display: flex;
     width: 100vw;
     height: calc(100vh - 60px);
-    min-height:640px;
+    min-height:550px;
     background-color: #5F6A81;
     margin: 30px 0;
     justify-content: center;
     position: relative;
     transition: 1s;
+    flex-wrap: wrap;
 }
 #hq-carousel > .container {
     align-self: center;
     display: grid;
-    max-width: 1024px;
+    max-width: 960px;
+    max-height: 540px;
     gap: 20px 20px;
-    position: relative;
-    grid-template-rows: minmax(calc( 45vh - 60px), 260px) minmax(calc( 45vh - 100px), 160px);
-    grid-template-columns: minmax(auto, 290px) minmax(auto, 250px) minmax(auto, 140px) minmax(auto, 280px);
+    position: absolute;
+    grid-template-rows: minmax(calc( 50% - 60px), 260px) minmax(calc( 50% - 100px), 160px);
+    grid-template-columns: minmax(auto, 290px) minmax(auto, 230px) minmax(auto, 110px) minmax(auto, 270px);
 }
 
 #hq-carousel .square {
-    /* overflow: hidden; */
     background-repeat: no-repeat;
     background-position: center;
     background-clip: content-box;
@@ -35,30 +36,31 @@
     box-shadow: 3px 3px 6px #0000005b;
     align-self: center;
     display: block;
-    transition: 1s;
+    z-index: 2;
 }
-#hq-carousel .square .baloon{
+
+#hq-carousel .square .balloon{
     transition: .5s;
-    
 }
 #hq-carousel .square:hover {
     /* background-size: 120% 120%; */
     width: 110% !important;
+    height: 110% !important;
     margin-left: -5% !important;
-    margin-top: -15%;
+    margin-top: -5%;
     transition: 0.3s;
-    z-index: 2;
-    box-shadow: 15px 15px 8px #00000083;
+    z-index: 3;
+    box-shadow: 35px 20px 12px #00000083;
 }
-#hq-carousel .square:hover .baloon {
+#hq-carousel .square:hover .balloon {
     width: 270px;
     height: 210px;
     font-size: 18px;
-    margin-top:-40px;
+    margin-top:-2s0px;
 
 }
-#hq-carousel .square:nth-child(2):hover .baloon { margin-left: -40px;}
-#hq-carousel .square:nth-child(3):hover .baloon { margin-left: -40px;}
+#hq-carousel .square:nth-child(2):hover .balloon { margin-left: -40px;}
+#hq-carousel .square:nth-child(3):hover .balloon { margin-left: -50px;}
 #hq-carousel #square0{
     width: auto;
     height: 100%;
@@ -93,11 +95,11 @@
 }
 
 
-#hq-carousel .baloon {
+#hq-carousel .balloon {
     position: absolute;
     width: 220px;
     height: 180px;
-    background-image: url('img/baloon0.svg');
+    background-image: url('img/balloon0.svg');
     display: block;
     background-size: contain;
     background-repeat: no-repeat;
@@ -110,34 +112,34 @@
     letter-spacing: 2px;
 }
 
-#hq-carousel #square0 .baloon {
+#hq-carousel .square:first-child .balloon {
     top: -70px;
     left: -70px;
 }
-#hq-carousel #square1 .baloon {
+#hq-carousel .square:nth-child(2) .balloon {
     top: -50px;
     left: 25px;
 }
-#hq-carousel #square2 .baloon {
-    top: -75px;
-    left: 150px;
+#hq-carousel .square:nth-child(3) .balloon {
+    top: -85px;
+    left: 110px;
     transform: scaleX(-1);
 }
-#hq-carousel #square2 .baloon h4{
+#hq-carousel .square:nth-child(3) .balloon h4{
     transform: scaleX(-1);
 }
-#hq-carousel #square3 .baloon {
+#hq-carousel .square:nth-child(4) .balloon {
     top: -30px;
     left: -100px;
     padding: 5px 7px;
-    background-image: url('img/baloon1.svg');
+    background-image: url('img/balloon1.svg');
 }
-#hq-carousel #square4 .baloon {
+#hq-carousel .square:nth-child(5) .balloon {
     top: -20px;
     left: -40px;
     padding: 5px 10px;
     width: 260px;
-    background-image: url('img/baloon2.svg');
+    background-image: url('img/balloon2.svg');
 }
 
 #hq-carousel .button {
@@ -151,14 +153,39 @@
     background-repeat: no-repeat;
     background-position-x: 12px;
     background-position-y: 6px;
-    box-shadow: #00000083 1px 1px 6px;
+    box-shadow: #000000a6 8px 8px 8px;
     background-color: rgb(233, 233, 233);
 }
 #hq-carousel .button#button-left {
-    margin: auto -30px auto 0;
+    margin: auto auto auto 5%;
 
 }
 #hq-carousel .button#button-right {
-    margin: auto 0 auto -30px;
+    margin: auto 5% auto auto;
     transform: scaleX(-1);
 }
+.hidden .square {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+}
+@keyframes nextsquare {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes nextballoon {
+    0%   {opacity: 0;}
+    45%  {opacity: 0;}
+    100% {opacity: 1;}
+}
+.unhidden .square:first-child{  animation: nextsquare 0.4s;}
+.unhidden .square:nth-child(2){  animation: nextsquare 0.8s;}
+.unhidden .square:nth-child(4){  animation: nextsquare 1.2s;}
+.unhidden .square:nth-child(3){  animation: nextsquare 1.6s;}
+.unhidden .square:nth-child(5){ animation: nextsquare 2s;}
+.unhidden .square:first-child .balloon {  animation: nextballoon 1.1s;}
+.unhidden .square:nth-child(2) .balloon {  animation: nextballoon 1.3s;}
+.unhidden .square:nth-child(4) .balloon {  animation: nextballoon 1.5s;}
+.unhidden .square:nth-child(3) .balloon {  animation: nextballoon 1.7s;}
+.unhidden .square:nth-child(5) .balloon { animation: nextballoon 2s;}
+

@@ -73,7 +73,7 @@ a{ text-decoration: none;}
 }
 ul.dropdown > li > ul { 
     font-size: 20px;
-    background: url('img/Baloon-dropdown.svg') no-repeat ;
+    background: url('img/Balloon-dropdown.svg') no-repeat ;
     background-size: contain;
     background-position: top 0px;
     background-attachment: scroll;
@@ -97,7 +97,7 @@ ul.dropdown > li > ul > li {
 .dropdown > li:hover > ul, .dropdown > li > ul:hover { visibility: visible; opacity: 1;}
 ul.dropdown > li > ul > li > ul { 
     
-    background: url('img/excla-baloon.svg') no-repeat;
+    background: url('img/excla-balloon.svg') no-repeat;
     background-attachment: scroll;
     background-size: auto;
     background-size: contain;
@@ -139,8 +139,7 @@ ul.dropdown > li > ul > li > ul {
     height: 170px ;
     display: block;
     overflow: hidden;
-    border-radius: 2px;
-    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.200);
+    border-radius: 5px 5px 0 0;
 }
 .post > span {
     width: 100%;
@@ -148,13 +147,14 @@ ul.dropdown > li > ul > li > ul {
     position: relative;
     box-sizing: border-box;
     padding: 20px;
-    background-image: linear-gradient( transparent,Black);
+    background-image: linear-gradient( transparent, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7));
     color: white;
     display: block;
     transition: .6s;
     margin-top: -120px;
     line-height: 30px;
 }
+.post h4 { font-size: 27px;}
 .post h4 , .post p { margin: 0; }
 .post p:last-child { 
     position: absolute;
@@ -174,11 +174,11 @@ ul.dropdown > li > ul > li > ul {
 
 }
 .post:hover img {
-    width: calc(40px + 100%);
-    height: calc(40px + 100%);
+    width: calc(12px + 100%);
+    height: calc(12px + 100%);
 }
 .post:hover span {
-    margin-top: calc(-40px + -120px);
+    margin-top: calc(-12px + -120px);
 }
 #side {  
     display: flex;
@@ -192,8 +192,9 @@ ul.dropdown > li > ul > li > ul {
     max-width: 400px;
     flex: 1 1 250px;
 }
+#side .post:last-child { border-radius: 0 0 8px 8px;}
 #side .post span h4 { font-size: 23px;}
-#side .post + .post { margin-top: 15px;}
+/* #side .post + .post { margin-top: 0px;} */
 
 #sub-post {
     margin-top: 35px;
@@ -210,9 +211,6 @@ ul.dropdown > li > ul > li > ul {
     height:200px;
     flex: 1 1 300px;
 }
-#sub-post .post h4 {
-    font-size: 30px;
-}
 #sub-post .post p {  font-size: 14px;}
 #sub-post .post p:last-child {  
     font-size: 11px;
@@ -222,7 +220,7 @@ ul.dropdown > li > ul > li > ul {
     margin-top: 25px;
     margin-bottom: 25px;
     width: 100%;
-    height: 390px ;
+    height: 300px ;
     max-width: 1024px;
     flex: 1 1 300px;
     position: relative;
@@ -232,7 +230,7 @@ ul.dropdown > li > ul > li > ul {
     content: '';
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.096),rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.568));
+    background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.096),rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.700));
     z-index: 2;
     position: absolute;
 
@@ -244,15 +242,17 @@ ul.dropdown > li > ul > li > ul {
     height: 170px;
     flex: 1 1 300px;
     margin-top: -170px;
-    z-index: 2;
+    z-index: 3;
+    background: none;
 }
 #sub-post .post:last-child:hover span{
-    margin-top: calc(-40px + -170px);
+    margin-top: -182px;
 }
 #sub-post .post:last-child h4{
     font-size: 40px;
     line-height: 50px;
 }
+#sub-post .post:last-child p { font-size: 22px;}
 #news {
     width: 100%;
     min-height: 504px;
@@ -300,11 +300,17 @@ ul.dropdown > li > ul > li > ul {
     grid-row: 1 / 4;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.438);
     position: relative;
-    transition: 0.4s linear;
+    transition: .4s linear;
 } 
 #news .list:hover img { 
     filter: grayscale(1);
+    /* transform: rotate3d(0, 1 , 0, 360deg); */
+    /* transform: skew(10deg, 10deg); */
+    /* transform: translate3d(100px, 50%); */
+    /* transform: matrix(1, 2, -1, 1, 80, 80); */
+    /* transform: perspective(7.5cm); */
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.575);
+    transition: 0.8s;
 }
 #news li > p, #news li > span, #news li > h5{ margin: 0}
 #news h5 { 
@@ -316,6 +322,7 @@ ul.dropdown > li > ul > li > ul {
     font-size: 10px;
     font-family: 'Gibi';
     font-style: italic;
+    
 }
 #news li > p { color: #3a3a3a;}
 #news div:nth-child(2) {
@@ -328,10 +335,9 @@ ul.dropdown > li > ul > li > ul {
     width: 100%;
     height: 220px;
 }
-#news div .post span{
-
+#news div .post:last-child{
+    border-radius: 0 0 8px 8px;
 }
-
 
 #footer { 
     display: flex;

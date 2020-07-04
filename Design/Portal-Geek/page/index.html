@@ -130,7 +130,7 @@
                     </span>
                 </div>
                 <div class="post">
-                    <img src="img/xiaomi.jpg">
+                    <img src="img/spiderman.jpg">
                     <span>
                         <h4>Novo Xiaomi</h4>
                         <p>Noticias > Celular</p>
@@ -173,39 +173,106 @@
                 </div>
             </section>
             <section id="hq-carousel">
-                <a  class="button" id="button-left" href=""></a>
-                <div class="container">
+                <div onclick="hqPreview()" class="button" id="button-left"></div>
+                <div class="container" id="slid0">
 
                     <div class="square" id="square0" style="background-image: url('img/super.jpg');">
-                        <span class="baloon">
+                        <span class="balloon">
                             <h4>Superman enfrentara o batman novamente em nova hq</h4>
                         </span>
                     </div>
 
                     <div class="square" id="square1" style="background-image: url('img/godofwar.jpg');">
-                        <span class="baloon">
+                        <span class="balloon">
                             <h4>Veja essa incrível gameplay</h4>
                         </span>
                     </div>
     
                     <div class="square" id="square2" style="background-image: url('img/spiderman.jpg');">
-                        <span class="baloon">
+                        <span class="balloon">
                             <h4>Como será o aranha verso da Marvel ?</h4>
                         </span>
                     </div>
                     <div class="square" id="square3"style="background-image: url('img/bm.jpg');">
-                        <span class="baloon">
+                        <span class="balloon">
                             <h4>Temporada final de Black mirror?</h4>
                         </span>
                     </div>
                     <div class="square" id="square4" style="background-image: url('img/pokemon.jpg');">
-                        <span class="baloon">
+                        <span class="balloon">
                             <h4>Pq o picachu não evolui Poww??</h4>
                         </span>
                     </div>
+                    
 
                 </div>
-                <a href="" class="button" id="button-right"></a>
+                
+                <div class="container hidden" id="slid1">
+
+                    <div class="square" id="square0" style="background-image: url('img/dbz.jpg');">
+                        <span class="balloon">
+                            <h4>Superman enfrentara o batman novamente em nova hq</h4>
+                        </span>
+                    </div>
+
+                    <div class="square" id="square1" style="background-image: url('img/bm.jpg');">
+                        <span class="balloon">
+                            <h4>Veja essa incrível gameplay</h4>
+                        </span>
+                    </div>
+    
+                    <div class="square" id="square2" style="background-image: url('img/naruto.jpg');">
+                        <span class="balloon">
+                            <h4>Assista ao proximo episodio de naruto</h4>
+                        </span>
+                    </div>
+                    <div class="square" id="square3"style="background-image: url('img/mk.jpg');">
+                        <span class="balloon">
+                            <h4>novo mk</h4>
+                        </span>
+                    </div>
+                    <div class="square" id="square4" style="background-image: url('img/xiaomi.jpg');">
+                        <span class="balloon">
+                            <h4>new xiaomi??</h4>
+                        </span>
+                    </div>
+                    
+
+                </div>
+
+                <div class="container hidden" id="slid2">
+
+                    <div class="square" id="square0" style="background-image: url('img/bleach.jpg');">
+                        <span class="balloon">
+                            <h4>Superman enfrentara o batman novamente em nova hq</h4>
+                        </span>
+                    </div>
+
+                    <div class="square" id="square1" style="background-image: url('img/dbz.jpg');">
+                        <span class="balloon">
+                            <h4>Veja essa incrível gameplay</h4>
+                        </span>
+                    </div>
+    
+                    <div class="square" id="square2" style="background-image: url('img/mk.jpg');">
+                        <span class="balloon">
+                            <h4>Assista ao proximo episodio de naruto</h4>
+                        </span>
+                    </div>
+                    <div class="square" id="square3"style="background-image: url('img/godofwar.jpg');">
+                        <span class="balloon">
+                            <h4>novo mk</h4>
+                        </span>
+                    </div>
+                    <div class="square" id="square4" style="background-image: url('img/thor.jpg');">
+                        <span class="balloon">
+                            <h4>new xiaomi??</h4>
+                        </span>
+                    </div>
+                    
+
+                </div>
+                <div class="button" onclick="hqNext()" id="button-right"></div>
             </section>
             <section id="news">
                 <div>
@@ -244,7 +311,6 @@
                 <div>
                     <header><h4>Anime</h4></header>
                     <div class="post">
-                        
                         <img src="img/spacex.jpg">
                         <span>
                             <h4>Lançamento será hoje</h4>
@@ -274,6 +340,7 @@
             </ul>
             <p>© MeuSite 2020 - Todos os Direitos Reservados </p>
             <script src="slide/carousel.js"></script>
+            <script src="hq-carousel/carousel.js"></script>
         </footer>
         
     </body>
