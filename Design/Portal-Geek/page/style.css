@@ -12,8 +12,14 @@ a{ text-decoration: none;}
 #header{
     display: flex;
     height: 180px;
+    width: 100%;
 }
-#button-menu{display: none;}
+#button-menu{
+    display: none;
+    height: 50px;
+    width: 50px;
+    align-self: center;
+}
 #button-menu span{
     margin: 10px;
     width: 35px;
@@ -22,6 +28,7 @@ a{ text-decoration: none;}
     background-color: white;
     position: relative;
     display: block;
+    transition: 0.4s;
 }
 #button-menu span::before, #button-menu span::after{
     content: '';
@@ -38,7 +45,7 @@ a{ text-decoration: none;}
 }
 #button-menu span::after{
      bottom: -8px;
- }
+}
 #container-menu {
     align-self: flex-end;
     align-content: center;
@@ -46,9 +53,11 @@ a{ text-decoration: none;}
     background-color: #161616;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 #menu {
-    width: 1024px;
+    width: 100%;
+    max-width: 1024px;
     background-color: #161616;
     color: white;
     height: 50px;
@@ -56,72 +65,127 @@ a{ text-decoration: none;}
 }
 #menu > * {  align-self: center;}
 #menu .dropdown > li > a{ color: white;  font-size: 18px; }
+.dropdown * { list-style: none; color: black }
 .dropdown { 
     display: flex;
     font-family: "Gibi";
     padding-left: 20px;
     z-index: 999 !important;
+    width: 100%;
 }
-.dropdown > li + li{ margin-left: 35px;}
-.dropdown * { list-style: none; color: black }
-.dropdown > li > ul > li {
-    width: calc(100% - 12px);
-    margin-left: 2px; 
-}
-.dropdown > li > ul > li > ul > li {
-    width: 65%;
-}
-ul.dropdown > li > ul { 
-    font-size: 20px;
-    background: url('img/Balloon-dropdown.svg') no-repeat ;
-    background-size: contain;
-    background-position: top 0px;
-    background-attachment: scroll;
-    padding-top: 95px;
-    padding-left: 0px;
-    padding-bottom: 50px;
-    box-sizing: border-box;
-    transition: all .7s;
-    width: 200px;
-    height: 290px;
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-}
-ul.dropdown > li > ul > li {
-    padding: 3px 25px;
-    box-sizing: border-box;
-    min-width: 140px;
-}
-.dropdown ul > li:hover  { background: orangered; }
-.dropdown > li:hover > ul, .dropdown > li > ul:hover { visibility: visible; opacity: 1;}
-ul.dropdown > li > ul > li > ul { 
+@media only screen and (min-width: 960px){
+
+    .dropdown > li + li{ margin-left: 35px;}
+
+    .dropdown > li > ul > li {
+        width: calc(100% - 12px);
+        margin-left: 2px; 
+    }
+    .dropdown > li > ul > li > ul > li {
+        width: 65%;
+    }
+    ul.dropdown > li > ul { 
+        font-size: 20px;
+        background: url('img/Balloon-dropdown.svg') no-repeat ;
+        background-size: contain;
+        background-position: top 0px;
+        background-attachment: scroll;
+        padding-top: 95px;
+        padding-left: 0px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+        transition: all .7s;
+        width: 200px;
+        height: 290px;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+    }
+    ul.dropdown > li > ul > li {
+        padding: 3px 25px;
+        box-sizing: border-box;
+        min-width: 140px;
+    }
+    .dropdown ul > li:hover  { background: orangered; }
+    .dropdown > li:hover > ul, .dropdown > li > ul:hover { visibility: visible; opacity: 1;}
+    ul.dropdown > li > ul > li > ul { 
+        
+        background: url('img/excla-balloon.svg') no-repeat;
+        background-attachment: scroll;
+        background-size: auto;
+        background-size: contain;
+        background-position: top 0px;
+        background-attachment: scroll;
+        padding-top: 65px;
+        padding-left: 60px;
+        padding-bottom: 50px;
+        transition: all .7s;
+        width: 350px;
+        height: 200px;
+        position: absolute;
+        left: 175px;
+        margin-top: -40px;
+        opacity: 0;
+        visibility: hidden;
+        box-sizing: border-box;
+        padding-right: 60px;
+    }
+    .dropdown > li > ul > li:hover > ul, 
+    .dropdown > li > ul > li > ul:hover,
+    .dropdown > li:hover ul::before, 
+    .dropdown > li:hover ul::after 
+    { visibility: visible; opacity: 1; z-index: 999 !important;}
+    #sub-post .post p:last-child {  
+        font-size: 11px;
+        letter-spacing: 1.2px;
+    }
+    #sub-post .post:last-child{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        width: 100%;
+        height: 300px ;
+        max-width: 1024px;
+        flex: 1 1 300px;
+        position: relative;
     
-    background: url('img/excla-balloon.svg') no-repeat;
-    background-attachment: scroll;
-    background-size: auto;
-    background-size: contain;
-    background-position: top 0px;
-    background-attachment: scroll;
-    padding-top: 65px;
-    padding-left: 60px;
-    padding-bottom: 50px;
-    transition: all .7s;
-    width: 350px;
-    height: 200px;
-    position: absolute;
-    left: 175px;
-    margin-top: -40px;
-    opacity: 0;
-    visibility: hidden;
-    box-sizing: border-box;
-    padding-right: 60px;
+    }
+    #sub-post .post:last-child::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.096),rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.700));
+        z-index: 2;
+        position: absolute;
+    
+    }
+    
+    #sub-post .post:last-child span{
+        padding-top: 50px;
+        max-width: 100%;
+        height: 170px;
+        flex: 1 1 300px;
+        margin-top: -170px;
+        z-index: 3;
+        background: none;
+    }
+    #sub-post .post:last-child:hover span{
+        margin-top: -182px;
+    }
+    #sub-post .post:last-child h4{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    #sub-post .post:last-child p { font-size: 22px;}
+    #news {
+        width: 100%;
+        min-height: 504px;
+        max-width: 1024px;
+        margin-bottom: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
 }
-.dropdown > li > ul > li:hover > ul, 
-.dropdown > li > ul > li > ul:hover,
-.dropdown > li:hover ul::before, 
-.dropdown > li:hover ul::after 
-{ visibility: visible; opacity: 1; z-index: 999 !important;}
 #container {
     min-height: 500px;
     max-width: 100%;
@@ -212,56 +276,7 @@ ul.dropdown > li > ul > li > ul {
     flex: 1 1 300px;
 }
 #sub-post .post p {  font-size: 14px;}
-#sub-post .post p:last-child {  
-    font-size: 11px;
-    letter-spacing: 1.2px;
-}
-#sub-post .post:last-child{
-    margin-top: 25px;
-    margin-bottom: 25px;
-    width: 100%;
-    height: 300px ;
-    max-width: 1024px;
-    flex: 1 1 300px;
-    position: relative;
 
-}
-#sub-post .post:last-child::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.096),rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.700));
-    z-index: 2;
-    position: absolute;
-
-}
-
-#sub-post .post:last-child span{
-    padding-top: 50px;
-    max-width: 100%;
-    height: 170px;
-    flex: 1 1 300px;
-    margin-top: -170px;
-    z-index: 3;
-    background: none;
-}
-#sub-post .post:last-child:hover span{
-    margin-top: -182px;
-}
-#sub-post .post:last-child h4{
-    font-size: 40px;
-    line-height: 50px;
-}
-#sub-post .post:last-child p { font-size: 22px;}
-#news {
-    width: 100%;
-    min-height: 504px;
-    max-width: 1024px;
-    margin-bottom: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
 #news header {
     background-image: url('img/sep.svg');
     background-position-y: -5px;
@@ -304,11 +319,6 @@ ul.dropdown > li > ul > li > ul {
 } 
 #news .list:hover img { 
     filter: grayscale(1);
-    /* transform: rotate3d(0, 1 , 0, 360deg); */
-    /* transform: skew(10deg, 10deg); */
-    /* transform: translate3d(100px, 50%); */
-    /* transform: matrix(1, 2, -1, 1, 80, 80); */
-    /* transform: perspective(7.5cm); */
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.575);
     transition: 0.8s;
 }
@@ -349,6 +359,7 @@ ul.dropdown > li > ul > li > ul {
     color: white;
     font-family:   'Gibi';
     font-size: 20px;
+    overflow: hidden;
 }
 #footer > span:first-child {
     background-color: #0e0e0e;
@@ -362,6 +373,7 @@ ul.dropdown > li > ul > li > ul {
     list-style: none;
     justify-content: center;
     align-content: center;
+    flex-wrap: wrap;
 }
 #footer ul > li { letter-spacing: 3px;}
 #footer ul > li + li { margin-left: 30px;}
@@ -373,15 +385,104 @@ ul.dropdown > li > ul > li > ul {
     letter-spacing: 2px;
 }
 
-@media (max-width: 480px){
-    /* #body { overflow-x: hidden;} */
-    /* #sub-post{
-        min-width: 1300px;
-        width: 1400px;
-        flex-wrap: nowrap;
-        height: 300px;
-        overflow-x: scroll;
-        justify-content: space-around;
-        align-content: space-around; */
-   /* } */
+@media only screen and (max-width: 480px){
+
+    #menu .dropdown {
+        display: block;
+        height: auto;
+        width: 100vw;
+    }
+   /* #hq-carousel { display: none;} */
+   #news {
+        display: block;
+    }
+
+   #news div:nth-child(2) .post {
+        width: 100%;
+        max-width: 480px;
+    }
+
+
+   #footer ul { display: block;}
+   #footer ul > li + li { margin-left: 0px;}
+   #footer p { height: auto;}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+    #news div:nth-child(2) .post {
+        width: 50vw;
+        max-width: 400px;
+    }
+
+
+
+}
+
+
+@media only screen and (max-width: 960px){
+
+    #header {
+        position: sticky;
+        top: -130px;
+        z-index: 999;
+        min-height: 180px;
+        height: auto;
+    }
+    #container-menu { 
+        display: block;
+        height: 50px;
+    }
+    #menu {
+        position: relative;
+        height: 100vh;
+        width: 70vw;
+        display: block;
+        flex-wrap: wrap;
+        z-index: 997;
+        overflow: scroll;
+        transition: 1s;  
+        top: 50px;
+        color: white;
+    }
+
+    #menu li a { color:  rgb(165, 165, 165);}
+    #menu ul > li > ul > li > ul > li > ul > *{ visibility: hidden; display: none;}
+    .close #menu{margin-left: -70vw;}
+
+    #button-menu { 
+        display: block; 
+        z-index: 999;
+        margin-top: 0px;
+        height: 30px;
+        position: absolute;
+        padding: 10px;
+    }
+    #button-menu > span{transform: rotate(315deg);}
+    .close #button-menu > span{ transform: rotate(0deg);}
+    #button-menu span::before{
+        top: 0px;
+        transform: rotate(-90deg);
+    }
+
+
+    .close #button-menu span::before{
+        top: -8px;
+        transform: rotate(0deg);
+    }
+    #button-menu span::after{visibility: hidden;}
+    .close #button-menu span::after{visibility: visible;}
+    .close #button-menu span, .close #button-menu span::before{ height: 3px;}
+    #button-menu span, #button-menu span::before{ height: 6px;}
+
+    .dropdown { display: block;}
+
+    #sub-post .post {
+        max-width: 400px;
+        max-height: 200px;
+    }
+
+    #side { margin-left: 0px;}
+
+    #news div:nth-child(2) { justify-content: space-around; margin-bottom: 20px; }
+
 }

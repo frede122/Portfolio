@@ -5,19 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="normalize.css">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="slide/carousel.css">
         <link rel="stylesheet" href="hq-carousel/hq-carousel.css">
+        <link rel="stylesheet" href="style.css">
 
         <title>Portal-Geek</title>
     </head>
     <body>
         <header id="header">
             <div id="container-menu">
-                <nav id="menu">
-                    <div id="button-menu">
-                        <span></span>
-                    </div>
+                <div onclick="menuOpen()"  id="button-menu">
+                    <span></span>
+                </div>
+                <nav id="menu" class="close">
+
                     <a href=""><img src="img/home.svg" height="35px"></a>
                     <ul class="dropdown">
                         <li>
@@ -341,6 +342,17 @@
             <p>© MeuSite 2020 - Todos os Direitos Reservados </p>
             <script src="slide/carousel.js"></script>
             <script src="hq-carousel/carousel.js"></script>
+            <script>
+                var open = false;
+                function menuOpen(){
+                    if(open){ 
+                        document.getElementById('container-menu').classList.add('close');
+                    }else{
+                        document.getElementById('container-menu').classList.remove('close')
+                    }
+                    open = !open;
+                }
+            </script>
         </footer>
         
     </body>

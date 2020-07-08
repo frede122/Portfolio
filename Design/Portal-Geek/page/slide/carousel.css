@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     transition: filter 1s .0s ;
+    overflow: hidden;
 }
 #carousel * { z-index: 0;}
 
