@@ -20,13 +20,11 @@ function active(element){
     addAllCarouselItem("blur");
     element.classList.remove("blur");
     element.classList.add("active");
-    // window.setTimeout(element.style.zIndex = 3, 1000);
 }
 function desactive(element, time){
     
     removeAllCarouselItem("blur");
     element.classList.remove("active");
-    // element.style.zIndex = 0;
     window.setTimeout(() => {element.style.zIndex = 0 }, time);
 }
 
@@ -51,5 +49,5 @@ function carMouseOver(id){
 }
 function carMouseOut(){ lock = false; }
 
-playCarousel(3000, 1500, true, false);
+playCarousel(3000, 1500, false, false);
 

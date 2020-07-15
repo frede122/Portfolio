@@ -13,6 +13,10 @@ a{ text-decoration: none;}
     display: flex;
     height: 180px;
     width: 100%;
+    flex-wrap: wrap;
+}
+#header h1 {
+    margin: 40px 0px 0px 45px;
 }
 #button-menu{
     display: none;
@@ -225,7 +229,6 @@ a{ text-decoration: none;}
     position: absolute;
     bottom: 0;
     right: 20px;
-    font-family:   'Gibi';
     font-style: italic;
     font-weight: lighter;
     font-size: 12px;
@@ -331,7 +334,6 @@ a{ text-decoration: none;}
 #news li > span { 
     color: #707070;
     font-size: 10px;
-    font-family: 'Gibi';
     font-style: italic;
     
 }
@@ -359,11 +361,11 @@ a{ text-decoration: none;}
     flex-wrap: wrap;
     height: 350px;
     width: 100%;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(24,24,24);
     color: white;
-    font-family:   'Gibi';
     font-size: 20px;
     overflow: hidden;
+
 }
 #footer > span:first-child {
     background-color: #0e0e0e;
@@ -396,7 +398,7 @@ a{ text-decoration: none;}
         position: sticky;
         top: -130px;
         z-index: 999;
-        min-height: 180px;
+        min-height: 178px;
         height: auto;
     }
     #container-menu { 
@@ -480,11 +482,12 @@ a{ text-decoration: none;}
         justify-content: start;
         scroll-snap-type: x mandatory;
     }
-    #sub-post .post { flex: none; }
+    
     #sub-post .post {
-        width: calc(100vw - 20px);
+        flex: none;
+        width: 80vw;
         max-width: calc(100vw - 20px);
-        margin: 10px;
+        margin: 7px;
         max-height: auto;
         border-radius: 3px;
         scroll-snap-align: center;

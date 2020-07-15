@@ -91,7 +91,11 @@
     transition: .4s .2s ;
 
 }
-#carousel .item .content img { width: 100%; height: 100%;}
+#carousel .item .content img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
 #carousel .item:first-child .border { clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);}
 #carousel .item:first-child .content { clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);}
 #carousel .item:nth-child(2) .border{ 
@@ -138,3 +142,35 @@
 #carousel .active:nth-child(4) .content > span,
 #carousel .item:nth-child(4):hover .content > span
 { padding-left: 55px;}
+
+@media only screen and (max-width: 960px){
+    #carousel {
+        height: 315px;
+
+    }
+    #carousel .item  {
+        width: 110%;
+        height: 80%;
+    }
+    #carousel .item:first-child, #carousel .item:nth-child(4) {
+        margin-left: 0px !important;
+    }
+    #carousel .active .content, #carousel .item:hover .content {
+        width:  260% !important;
+        height: 315px !important;
+        top: 15px;
+    }
+    #carousel .active:nth-child(1) .content, 
+    #carousel .item:nth-child(1):hover .content,
+    #carousel .active:nth-child(2) .content, 
+    #carousel .item:nth-child(2):hover .content,
+    #carousel .active:nth-child(3) .content, 
+    #carousel .item:nth-child(3):hover .content {
+        top: 0px;
+    }
+    #carousel .active .content > span, #carousel .item:hover .content > span {  margin-top: -200px;}
+    #carousel .active:nth-child(2) .content > span, 
+    #carousel .item:nth-child(2):hover .content > span,
+    #carousel .active:nth-child(6) .content > span, 
+    #carousel .item:nth-child(6):hover .content > span  {  margin-left: 1%;}
+}

@@ -2,7 +2,25 @@
     font-family: 'Gibi';
     font-style: normal;
     font-weight: normal;
-    src: url("../font/Comic\ Gibi.ttf");
+    src: url("font/Comic\ Gibi.ttf");
+}
+@font-face {
+    font-family: 'Gibi';
+    font-style: normal;
+    font-weight: bold;
+    src: url("font/Comic\ Gibi\ Bold.ttf");
+}
+@font-face {
+    font-family: 'Gibi';
+    font-style: italic;
+    font-weight: bold;
+    src: url("font/Comic\ Gibi\ Bold\ Italic.ttf");
+}
+@font-face {
+    font-family: 'Gibi';
+    font-style: italic;
+    font-weight: normal;
+    src: url("font/Comic\ Gibi\Italic.ttf");
 }
 
 #hq-carousel {
@@ -207,7 +225,7 @@
 
 @media only screen and (max-width: 960px) {
     #hq-carousel {
-        min-height: 100vh;
+        min-height: 800px;
         height: auto;
         overflow: hidden;
     }
@@ -215,13 +233,13 @@
         align-self: center;
         display: grid;
         margin: 10px;
-        max-width: 960px;
-        max-height: 80vh;
-        height: auto;
+        max-width: 540px;
+        min-height: 85% !important;
         gap: 20px 20px;
         position: absolute;
-        grid-template-rows: repeat(4, 18vh);
-        grid-template-columns:repeat(2, minmax(40%, 260px));
+        grid-template-rows: repeat(4, minmax(20%, 150px));
+        grid-template-columns: repeat(2, minmax(40%, 260px));
+        width: auto;
     }
     #hq-carousel .button#button-right {
         margin: auto -30px auto auto;
