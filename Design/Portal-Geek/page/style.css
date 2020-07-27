@@ -355,41 +355,6 @@ a{ text-decoration: none;}
     border-radius: 0 0 8px 8px;
 }
 
-#footer { 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 350px;
-    width: 100%;
-    background-color: rgb(24,24,24);
-    color: white;
-    font-size: 20px;
-    overflow: hidden;
-
-}
-#footer > span:first-child {
-    background-color: #0e0e0e;
-    width: 100%;
-    height: 70px;
-    align-self: flex-start;
-}
-#footer ul { 
-    width: 100%;
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-}
-#footer ul > li { letter-spacing: 3px;}
-#footer ul > li + li { margin-left: 30px;}
-#footer p {
-    height: 15px;
-    margin:10px;
-    padding: 0;
-    align-self: flex-end;
-    letter-spacing: 2px;
-}
 
 
 @media only screen and (max-width: 960px){
@@ -455,26 +420,25 @@ a{ text-decoration: none;}
     #button-menu span, #button-menu span::before{ height: 6px;}
 
     .dropdown { display: block;}
-    /* #sub-post {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        width: 100vw;
-        justify-content: start;
-    } */
     #sub-post .post {
         max-width: 400px;
         max-height: 200px;
-        /* flex: none; */
-
     }
 
-    #side { margin-left: 0px;}
+    #side { 
+        margin-left: 0px; 
+        max-width: none;
+        justify-content: space-around;
+    }
 
-    #news div:nth-child(2) { justify-content: space-around; margin-bottom: 20px; }
+    #news div:nth-child(2) { 
+        justify-content: space-around;
+        margin-bottom: 20px; 
+    }
 
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 600px){
     #sub-post {
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -503,9 +467,6 @@ a{ text-decoration: none;}
     }
 
 
-   #footer ul { display: block;}
-   #footer ul > li + li { margin-left: 0px;}
-   #footer p { height: auto;}
 }
 
 @media only screen and (min-width: 481px) and (max-width: 960px) {

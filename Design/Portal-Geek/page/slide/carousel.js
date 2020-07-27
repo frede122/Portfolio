@@ -49,5 +49,5 @@ function carMouseOver(id){
 }
 function carMouseOut(){ lock = false; }
 
-playCarousel(3000, 1500, false, false);
+playCarousel(3000, 1500, true, false);
 
